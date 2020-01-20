@@ -1,0 +1,139 @@
+1. データベースへ接続
+
+```bash
+[db] $ mysql -u root -p
+```
+
+
+2. データベース作成
+
+```sql
+mysql> create database camp;
+```
+
+
+3. データベースの選択
+
+```sql
+mysql> use camp;
+```
+
+
+4-1. itemsテーブルの作成
+
+```sql
+mysql> CREATE TABLE items (
+    -> id int NOT NULL AUTO_INCREMENT,
+    -> name varchar(31) NOT NULL,
+    -> price int NOT NULL,
+    -> category_id int NOT NULL,
+    -> description varchar(1002) NOT NULL,
+    -> PRIMARY KEY (id),
+    -> INDEX category_id_index(category_id)
+    -> );
+```
+
+
+4-2. itemsテーブルの構造を確認
+
+```sql
+mysql> desc items;
+```
+
+
+4-3. categoriesテーブルの作成
+
+```sql
+mysql> CREATE TABLE categories (
+    -> id int NOT NULL AUTO_INCREMENT,
+    -> name varchar(255) NOT NULL,
+    => PRIMARY KEY (id)
+);
+```
+
+
+4-4. categoriesテーブルの構造を確認
+
+```sql
+mysql>desc categories;
+```
+
+
+5-1. 条件: price
+
+```sql
+mysql> select * from items where price <=7300;
+```
+
+
+5-2. 抽出項目: name、price
+
+```sql
+mysql> select name, price from items;
+```
+
+
+5-3. 並び替え: price
+
+```sql
+mysql> select * from items order by id desc;
+```
+
+1月6日の課題はここまで
+-------------------------------------------------
+
+
+5-4. 平均: price
+
+```sql
+mysql>
+```
+
+
+5-5. あいまい検索
+
+```sql
+mysql>
+```
+
+
+5-6. 結合
+
+```sql
+mysql>
+```
+
+
+6-1. 価格
+
+```sql
+mysql>
+```
+
+
+7-1. 価格
+
+```sql
+mysql>
+```
+
+
+8-1. items
+
+```sql
+mysql>
+```
+
+
+8-2. categories
+
+```sql
+mysql>
+```
+
+
+9. データベースの削除
+
+```sql
+mysql>
+```
