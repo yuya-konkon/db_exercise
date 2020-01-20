@@ -86,7 +86,7 @@ mysql> select * from items order by id desc;
 5-4. 平均: price
 
 ```sql
-mysql>
+mysql> select avg(price) from items;
 ```
 
 
