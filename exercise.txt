@@ -93,47 +93,47 @@ mysql> select avg(price) from items;
 5-5. あいまい検索
 
 ```sql
-mysql>
+mysql> SELECT * FROM items WHERE description LIKE '%詰合せ%';
 ```
 
 
 5-6. 結合
 
 ```sql
-mysql>
+mysql> SELECT * FROM items INNER JOIN categories ON price < 7000 = categories.name;
 ```
 
 
 6-1. 価格
 
 ```sql
-mysql>
+mysql> UPDATE items SET price=price+500 WHERE price > 7000;
 ```
 
 
 7-1. 価格
 
 ```sql
-mysql>
+mysql> DELETE FROM items WHERE price < 4000 ;
 ```
 
 
 8-1. items
 
 ```sql
-mysql>
+mysql> DROP TABLE items;
 ```
 
 
 8-2. categories
 
 ```sql
-mysql>
+mysql> DROP TABLE categories;
 ```
 
 
 9. データベースの削除
 
 ```sql
-mysql>
+mysql> drop database camp;
 ```
