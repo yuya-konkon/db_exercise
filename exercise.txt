@@ -107,14 +107,14 @@ mysql> SELECT * FROM items INNER JOIN categories ON price < 7000 = categories.na
 6-1. 価格
 
 ```sql
-mysql> UPDATE items SET price=price+500 WHERE price > 7000;
+mysql> UPDATE items SET price = price +500 WHERE price >= 7000;
 ```
 
 
 7-1. 価格
 
 ```sql
-mysql> DELETE FROM items WHERE price < 4000 ;
+mysql> DELETE FROM items WHERE price =< 4000 ;
 ```
 
 
